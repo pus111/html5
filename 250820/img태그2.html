@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img 태그</title>
+  </head>
+  <body>
+    <img src="./imgs/0.5x/Asset 1@0.5x-100.jpg" alt="" width="1000" />
+    <a href="https://www.google.com"
+      ><img src="./imgs/SVG/Asset 1.svg" alt=""
+    /></a>
+
+    <picture>
+      <!--min-wudth:숫자px// 숫자이상으로 보여줌  -->
+      <source
+        media="(min-width:1280px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/11/15/46/fairy-9768590_640.jpg
+        "
+      />
+      <source
+        media="(min-width:1024px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/15/07/26/digital-9776392_640.jpg
+        "
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/16/03/48/butterfly-9777826_640.jpg
+        "
+      />
+      <source
+        media="(min-width:500px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/15/07/25/ai-generated-9776380_640.jpg
+        "
+      />
+      <img src="images/photo1.jpg.jpg" alt="Flowers" />
+    </picture>
+  </body>
+</html>
