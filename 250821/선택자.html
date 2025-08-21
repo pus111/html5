@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 선택자</title>
+    <style>
+      div>span {
+        color: red;
+      }
+      p+span{  /* p태그 다음에 span태그 있는 애 */
+color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="tit01 tit02">span 태그</span>
+      <p>
+        <span>
+          인라인태그
+          <span>span 태그</span>
+        </span>
+        <p>인라인태그</p>
+        <span>인라인태그</span>
+        <span>인라인태그</span>
+        <span>인라인태그</span>
+      </p>
+    </div>
+  </body>
+</html>

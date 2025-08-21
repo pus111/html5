@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- 내부방식 
+      !important : 싹다 무시 스타일에 적용된 가로픽셀만 우선순위적용 -->
+    <style>
+      img {
+        /*width: 200px !important;*/
+        width: 200px;
+      }
+
+      body {
+        text-align: center;
+      }
+    </style>
   </head>
+
   <body>
+    <img src="./imgs/tatget.svg" alt="tatget" width="50" />
     <img src="./imgs/tatget.svg" alt="tatget" width="100" />
+    <img src="./imgs/tatget.svg" alt="tatget" width="200" />
+    안녕하세요
+    <p>
+      <!--인라인 방식 -->
+      <img src="./imgs/tatget.svg" alt="tatget" style="width: 100px" />
+      <img src="./imgs/tatget.svg" alt="tatget" style="width: 100px" />
+      <img src="./imgs/tatget.svg" alt="tatget" style="width: 100px" />
+    </p>
+    <h1>
+      <img src="./imgs/tatget.svg" alt="tatget" />
+      <img src="./imgs/tatget.svg" alt="tatget" />
+      <img src="./imgs/tatget.svg" alt="tatget" />
+    </h1>
   </body>
 </html>
