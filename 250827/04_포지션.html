@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포지션</title>
+    <style>
+      * {
+        margin: 0; /*바깥쪽여백*/
+        padding: 0; /*안쪽여백*/
+      }
+      .con {
+        position: relative;
+        width: 640px;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      .con img {
+        width: 200px;
+      }
+      .con p:last-child {
+        /*con 기준으로 p 태그가 두개 ---> p: last-child 사용*/
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p>
+        <img
+          src="https://cdn.pixabay.com/photo/2025/03/23/07/12/woman-9488137_640.jpg"
+          alt=""
+        />
+      </p>
+
+      <p>
+        <img
+          src="https://cdn.pixabay.com/photo/2025/03/23/07/12/woman-9488137_640.jpg"
+          alt=""
+        />
+      </p>
+    </div>
+  </body>
+</html>

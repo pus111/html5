@@ -6,22 +6,45 @@
     <title>position</title>
     <style>
       div {
-        position: relative;
-        top: 500px;
+        width: 1324px;
+        margin: 450px auto; /*수평공식*/
       }
       p:nth-child(2) {
         position: fixed;
-        left: calc(1324px / 2);
+        left: calc((100% / 2) - (232px / 2));
         top: 350px;
       }
       p:nth-child(2) img {
         width: 232px;
       }
       p:nth-child(3) {
+        position: relative;
+        z-index: 1;
       }
     </style>
   </head>
   <body>
+    <div>
+      <p>
+        <img
+          src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
+          alt=""
+        />
+      </p>
+      <p>
+        <img
+          src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
+          alt=""
+        />
+      </p>
+      <p>
+        <img
+          src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+          alt=""
+        />
+      </p>
+    </div>
+
     <div>
       <p>
         <img
