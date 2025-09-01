@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      width: 500px;
+      border: 1px solid;
+      }
+
+      .normal{
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .nowrap{
+        white-space: nowrap;
+         overflow: hidden;
+        text-overflow: clip;
+      }
+      .pre{
+        white-space: pre;
+      }
+      .pre-wrap{
+        white-space: pre-wrap;
+      }
+      .pre-pre-line{
+        white-space: pre-line;
+      }
+.multi{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;/* 몇줄 까지 하고 .. 쓸래?*/
+  -webkit-box-orient: vertical;/*-webkit-line-clamp: 세트 */
+
+}
+  </style>
+</head>
+<body>
+  <p class="normal">
+   L                                    orem Ipsum is simply dummy text of the printing and typesetting industry. 
+  </p>
+
+  <p class="nowrap">
+                                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+  </p>
+
+  <p class="pre">
+  L                                    orem Ipsum is simply dummy text of the printing and typesetting industry. 
+  </p>
+
+<p class="pre-wrap"> 
+ L                                     orem Ipsum is simply dummy  text of the printing and typesetting industry. 
+  </p>
+
+  <p class="pre-line">
+L                                      orem Ipsum is simply dummy text of the printing and typesetting industry. 
+  </p>
+
+  <p class="multi">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+</body>
+</html>
