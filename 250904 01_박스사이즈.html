@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스사이즈</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 500px;
+        background-color: #ccc;
+        padding: 100px 0;
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /*여백과 패를 포함한 사이즈*/
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      ul {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid;
+        list-style: none;
+        overflow: hidden; /*overflow 줘야지 부모는 높이를 안 잃음 */
+        box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 0.5), 0 0 20px 0 red;
+        /*양의값 = 오른쪽 아래, 어러번 그림자 들어갈 수 있음, 오브제트 밖*/
+        box-shadow: 0 0 20px 0 palevioletred, inset 20px 20px 20px 0 yellow;
+      }
+      ul li {
+        width: 400px;
+        height: 300px;
+        float: left; /*float를 준 동시에 높이 잃음*/
+        box-sizing: border-box;
+      }
+      ul li:nth-child(1) {
+        background: #aaa;
+        padding: 10px;
+      }
+      ul li:nth-child(2) {
+        background: #bbb;
+      }
+      ul li:nth-child(3) {
+        background: #ccc;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 0 20px 0 blueviolet, inset 20px 20px 20px 0 yellow;
+        /*inset = 오브제트 안쪽*/
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <div>11</div>
+  </body>
+</html>

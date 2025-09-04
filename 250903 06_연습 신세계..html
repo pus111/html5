@@ -9,20 +9,56 @@
         margin: 0;
         padding: 0;
       }
-      div {
-        position: relative;
+      ul {
+        list-style: none;
+        width: 940px;
+        margin: 0 auto;
       }
-      p {
-        height: 450px;
-        width: 480px;
-        margin: 10px;
-        background-repeat: no-repeat;
+      ul li {
+        height: 480px;
+        width: 450px;
+        /* margin: 20px; */
+        /* background-repeat: no-repeat; */
         background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg);
-        border: 1px solid #000;
-        color: #fff;
+        /* border: 1px solid #000; */
+
+        border-radius: 70px 0;
       }
-      p:nth-child(1) {
-        border-radius: 70px 0px;
+      ul li:first-child {
+        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg);
+      }
+
+      ul li:nth-child(3) {
+        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg);
+      }
+
+      ul li:nth-child(4) {
+        background-image: url(https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg);
+      }
+
+      ul li div {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+        top: 35%;
+      }
+      ul li:nth-child(even) {
+        /*even = 짝수*/
+        float: right;
+      }
+
+      ul li:nth-child(odd) {
+        /*odd = 홀수*/
+        float: left;
+      }
+      ul li:ent-child(3),
+      ul li:nth-child(4) {
+        margin-top: 40px;
+      }
+      ul li div p {
+        padding-top: 20px;
       }
     </style>
   </head>
@@ -34,6 +70,45 @@
           <p>
             최선의 '품질'을통해<br />
             최상의 '맛'을 구현합니다
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h1>Convenience</h1>
+          <p>
+            보관/조리/폐기 전반에 걸친 고객 중심 마인드로<br />
+            최적화된 편의를 제공합니다.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <h1>Taste & Quality</h1>
+          <p>
+            최선의 '품질'을통해<br />
+            최상의 '맛'을 구현합니다
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <h1>Health & Wellness</h1>
+          <p>
+            고객의 건강과 라이프스타일을 지원하는<br />
+            맞춤형 푸드 옵션을 제공합니다.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <h1>Value</h1>
+          <p>
+            지구와 사회에 긍정적인 영향을 주는<br />
+            지속 가능하고 책임감 있는 사업을 이어갑니다.
           </p>
         </div>
       </li>
