@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background: #ccc;
+        display: flex;
+        gap: 40px; /*행(수평), 열(수직) 컨탠츠와 컨탠츠 사이 행과열 두번 가능   */
+        width: 1200px;
+        height: 800px;
+        /* flex-wrap: wrap; 줄바꿈 처리 부모가 랩핑 */
+        /* align-content: flex-start; */
+        /*cente :여러 컨텐츠가 부모의 가운데 
+        flex-end : 부모의 아래로 */
+        flex-direction: column-reverse;
+        /*row = 기본 / column=세로 / column-reverse=반대방향 */
+        flex-flow: column-reverse wrap;
+      }
+      .item {
+        width: 20%;
+        height: 40%;
+        border: 1px solid;
+        flex-shrink: 0; /*자식에게 주는 속성, 작을 때 쓰는 것*/
+        flex-grow: 1; /*남은공간을 더 클 때 쓰는 것, 마지막에 부모의 남은 공간을 다 씀*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>

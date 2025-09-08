@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습 신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        width: 1280px;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin: 50px auto;
+      }
+      ul li {
+        border-radius: 40px; /*부모 안에 있는 자식한테 */
+        overflow: hidden; /*부모 넘치는 자식 있으면 숨김*/
+      }
+      ul li:nth-child(even) {
+        top: -50px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"
+          ><img
+            src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+            alt=""
+        /></a>
+      </li>
+
+      <li>
+        <a href="#"
+          ><img
+            src="https://www.shinsegaefood.com/images/business/business_item_vecchiaEnuovo.jpg"
+            alt=""
+        /></a>
+      </li>
+
+      <li>
+        <a href="#"
+          ><img
+            src="https://www.shinsegaefood.com/images/business/business_item_olbaan.jpg"
+            alt=""
+        /></a>
+      </li>
+
+      <li>
+        <a href="#"
+          ><img
+            src="https://www.shinsegaefood.com/images/business/business_item_brand.jpg"
+            alt=""
+        /></a>
+      </li>
+
+      <li>
+        <a href="#"
+          ><img
+            src="	https://www.shinsegaefood.com/images/business/business_item_recette.jpg"
+            alt=""
+        /></a>
+      </li>
+    </ul>
+  </body>
+</html>
