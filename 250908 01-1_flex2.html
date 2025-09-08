@@ -13,13 +13,27 @@
         display: flex;
         /* flex-direction: column;*/
         background: #ccc;
+        width: 1200px;
+        height: 400px;
+        align-items: flex-start;
       }
       .item {
         background: red;
         /* flex-basis: 200px; */
+        /* flex-basis: 40%; flex-basis: -- > 기본 값 0 */
+        /* flex-shrink: 1; flex-shrink: ; ---> 기본 값 1 부모 안에서만.. / */
         border: 1px solid;
+        flex-shrink: 0;
         /* flex-grow: 1; */
-        flex-basis: 40%;
+      }
+      .item:first-child {
+        flex-grow: 0;
+      }
+      .item:nth-child(2) {
+        flex-grow: 2;
+      }
+      .item:nth-child(3) {
+        flex-grow: 1;
       }
     </style>
   </head>
