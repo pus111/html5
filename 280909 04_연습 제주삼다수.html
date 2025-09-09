@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>삼다수 연습 2</title>
+    <title>제주삼다수</title>
     <style>
       * {
         margin: 0;
@@ -12,34 +12,49 @@
       section {
         width: 100%;
         height: 100vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       section:nth-child(1) {
         background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
       }
-
       section:nth-child(2) {
         background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
       }
-
       section:nth-child(3) {
         background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
       }
-      div:nth-child(1) {
-        display: flex;
+      section p:last-child {
+        position: relative;
+        z-index: 1;
+      }
+      p.water {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      p.water img {
+        width: 230px;
       }
     </style>
   </head>
+
   <body>
     <section>
       <div>
         <p>
           <img
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
-            alt="BETTER"
+            alt=""
           />
+        </p>
+        <p>
           <img
-            src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
-            alt="BETTER"
+            src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+            alt=""
           />
         </p>
       </div>
@@ -47,15 +62,16 @@
 
     <section>
       <div>
-        <!--p요소 안에 img가 2개 라서 div로 묶어서 section 안에 넣음-->
         <p>
           <img
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
-            alt="JEJU"
+            alt=""
           />
+        </p>
+        <p>
           <img
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
-            alt="SAMDASOO"
+            alt=""
           />
         </p>
       </div>
@@ -66,11 +82,13 @@
         <p>
           <img
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/ECO.png"
-            alt="ECO"
+            alt=""
           />
+        </p>
+        <p>
           <img
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/FRIENDLY.png"
-            alt="FRIENDLY"
+            alt=""
           />
         </p>
       </div>
@@ -78,8 +96,8 @@
 
     <p class="water">
       <img
-        src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
-        alt="samdasoo"
+        src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
+        alt=""
       />
     </p>
   </body>
