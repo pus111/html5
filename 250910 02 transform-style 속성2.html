@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+        perspective: 400px; /* width 가지고 있는 값의 2배 */
+      }
+
+      #div2 {
+        height: 100px;
+        background: red;
+        transform: rotateX(60deg);
+        transform-style: preserve-3d; /*하위자식의 3d가 보이기 위한 속성, 부모요소에게 줌 */
+      }
+
+      #div3 {
+        padding: 50px;
+        background: yellow;
+        transform: rotateY(60deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3"></div>
+      </div>
+    </div>
+  </body>
+</html>

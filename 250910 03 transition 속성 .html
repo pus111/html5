@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        /*transition-property: width, height; transition-property = 바뀔 속성 설정
+        transition-duration: 1s, 2s;
+        transition-timing-function: ease;
+        transition-delay: 1s, -1s; */
+        /*transition: width 1s ease 1s, height 2s ease -1s; /*위 주석 처리 된 거 단축한 코드*/
+        transition: 1s;
+      }
+      p:hover {
+        /*마우스동작(애니매이션동작)*/
+        width: 200px;
+        height: 200px;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        width: 100px;
+        height: 50px;
+        background: #ccc;
+        margin: 20px;
+        transition: 2s;
+      }
+      ul:hover li {
+        width: 500px;
+      }
+      ul li:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      ul li:nth-child(3) {
+        transition-timing-function: ease-in; /*시작이 느림*/
+      }
+
+      ul li:nth-child(4) {
+        transition-timing-function: ease-out; /*끝이 느림*/
+      }
+      ul li:nth-child(5) {
+        transition-timing-function: ease-in-out; /*일정한속도*/
+      }
+      ul li:nth-child(6) {
+        transition-timing-function: linear;
+      }
+      ul li:nth-child(7) {
+        transition-timing-function: cubic-bezier(0.94, 0.66, 0.08, 0.93);
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+  </body>
+</html>
