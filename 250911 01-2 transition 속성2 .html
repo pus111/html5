@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 속성2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 115px;
+        margin: 0px auto;
+      }
+      ul li {
+        position: relative;
+        height: 94px;
+        overflow: hidden;
+      }
+      ul li img:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.5s;
+      }
+      ul li:hover img:nth-child(2) {
+        left: -100%;
+        top: -100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="./imgs/menu1_over.jpg" alt="" />
+        <img src="./imgs/menu1.jpg" alt="" />
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <img src="./imgs/menu2_over.jpg" alt="" />
+        <img src="./imgs/menu2.jpg" alt="" />
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <img src="./imgs/menu3_over.jpg" alt="" />
+        <img src="./imgs/menu3.jpg" alt="" />
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <img src="./imgs/menu4_over.jpg" alt="" />
+        <img src="./imgs/menu4.jpg" alt="" />
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <img src="./imgs/menu5_over.jpg" alt="" />
+        <img src="./imgs/menu5.jpg" alt="" />
+      </li>
+    </ul>
+  </body>
+</html>
