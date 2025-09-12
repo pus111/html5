@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        background-color: #ccc;
+        transition: 5s;
+        background-image: url(./imgs/photo1.jpg);
+        background-size: cover;
+      }
+      p:hover {
+        opacity: 0;
+        /* width: 100px; */
+        /* display: none; */
+      }
+      div,
+      section {
+        width: 500px;
+        height: 500px;
+        background: red;
+        margin: 20px;
+        transition: 1s; /*hover 뺀 대상의 나머지*/
+      }
+      div {
+        /* display: none; 그냥 안보이는것, 시간을 줄 수 없음 */
+        /* opacity: 0; 있는데 안 보이는 거, 시간 주는거 가능함*/
+      }
+      div:hover {
+        height: 100px;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div></div>
+    <section></section>
+  </body>
+</html>
