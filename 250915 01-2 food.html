@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food 메뉴</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrapper {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0; /* 부모의 부모한테 주기 즉, 상위요소 */
+      }
+      .wrapper > div {
+        display: flex;
+      }
+      .wrapper .top {
+        height: 24px;
+      }
+      .wrapper .menu {
+        justify-content: space-between; /*각각의 사이 떨어지게 함  */
+        height: 13px;
+      }
+      .wrapper .menu div {
+        display: flex;
+      }
+      .wrapper .main {
+        height: 744px;
+        align-items: flex-end;
+      }
+      .wrapper .foot {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <p><img src="./imgs/food_img/top.gif" alt="top" /></p>
+      </div>
+      <div class="menu">
+        <p><img src="./imgs/food_img/food_01.gif" alt="food_01" /></p>
+        <div>
+          <p><img src="./imgs/food_img/directory.gif" alt="directory" /></p>
+          <p><img src="./imgs/food_img/food_02.gif" alt="food_02" /></p>
+        </div>
+      </div>
+      <div class="main">
+        <p><img src="./imgs/food_img/note.gif" alt="note" /></p>
+        <p><img src="./imgs/food_img/image.gif" alt="image" /></p>
+        <div>
+          <!--div 부모 찾을꺼면 div class=main으로 찾으면 됨 
+          굳이 class만들어서 이름 안 넣어도 됨 -->
+          <p><img src="./imgs/food_img/number.gif" alt="number" /></p>
+          <p><img src="./imgs/food_img/navigation.gif" alt="navigation" /></p>
+        </div>
+        <p><img src="./imgs/food_img/page.gif" alt="page" /></p>
+      </div>
+      <div class="foot">
+        <p><img src="./imgs/food_img/bottom.gif" alt="bottom" /></p>
+      </div>
+    </div>
+  </body>
+</html>
