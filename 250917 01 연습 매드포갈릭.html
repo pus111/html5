@@ -16,48 +16,89 @@
         text-decoration: none;
         color: #333;
       }
-      .topwarp {
-        background: #cecece;
+      body {
+        background: #000;
       }
-      p {
-        background: #cecece;
+      .topwarp {
+        width: 1504px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      .topwarp .menu ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .logo {
+        text-align: left;
+        padding: 50px 0;
+      }
+      .visual {
+        width: 1504px;
+        height: 940px;
+        margin: 0 auto;
+      }
+      .visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .footer ul li {
+        margin: 40px 0;
+        padding: 0;
+        border: 0;
+        color: #fff;
+        vertical-align: baseline;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <p class="logo">
-      <img
-        src="	https://www.madforgarlic.com/resources/pc/images/common/logoB_B2.png"
-        alt="logoB"
-      />
-    </p>
-    <div class="topwarp">
-      <div class="top">
-        <ul>
+    <div class="wrap">
+      <div class="topwarp">
+        <p class="logo">
+          <img
+            src="	https://www.madforgarlic.com/resources/pc/images/common/logoB_B2.png"
+            alt="logoB"
+          />
+        </p>
+        <ul class="menu">
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">MEMBERSHIP</a></li>
+          <li><a href="#">EVENT</a></li>
+        </ul>
+        <ul class="utility">
           <li><a href="#">LOG IN</a></li>
           <li><a href="#">JOIN</a></li>
           <li><a href="#">CUSTOMER</a></li>
           <li><a href="#">RECRUIT</a></li>
         </ul>
-
-        <ul>
-          <li><a href="#">BRAND</a></li>
-          <li><a href="#">MENU</a></li>
-          <li><a href="#">STORE</a></li>
-          <li><a href="#">MEMBERSHIP</a></li>
-          <li><a href="#">EVENT</a></li>
-        </ul>
       </div>
 
-      <!-- <div class="menu">
+      <p class="visual">
+        <img
+          src="https://cdnt.madforgarlic.com/madforgarlic/202503/20250304_ACB_1741050726866.jpg"
+          alt="브랜드메인이미지"
+        />
+      </p>
+      <div class="footer">
         <ul>
-          <li><a href="#">BRAND</a></li>
-          <li><a href="#">MENU</a></li>
-          <li><a href="#">STORE</a></li>
-          <li><a href="#">MEMBERSHIP</a></li>
-          <li><a href="#">EVENT</a></li>
+          <li>
+            (주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F /
+            우편번호: 06098
+          </li>
+          <li>대표문의: 02-2286-8800</li>
+          <li>사업자번호: 261-81-16391 ㅣ 대표자: 윤다예</li>
+          <li>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</li>
         </ul>
-      </div> -->
+      </div>
+      <p class="sns">
+        <img src="https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png" alt="btn_sns">
+      </p>
+      </div>
     </div>
   </body>
 </html>
