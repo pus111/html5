@@ -21,14 +21,38 @@
       }
       .topwarp {
         width: 1504px;
+        height: 60px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 0;
       }
-      .topwarp .menu ul {
+      .topwarp .menu {
         display: flex;
-        justify-content: space-evenly;
+        gap: 40px;
+      }
+      .topwarp .menu li a {
+        color: #666;
+      }
+      .menu li a:hover {
+        color: white;
+      }
+      .topwarp .utility {
+        display: flex;
+        gap: 40px;
+      }
+      .topwarp .utility li a {
+        color: #666;
+      }
+      .utility li a:hover {
+        color: white;
+      }
+      .wrap .topwarp ul li a:after {
+        content: "|";
+      }
+      .wrap .topwarp ul li:last-child a:after {
+        content: "";
       }
       .logo {
         text-align: left;
@@ -44,13 +68,54 @@
         height: 100%;
         object-fit: contain;
       }
-      .footer ul li {
-        margin: 40px 0;
-        padding: 0;
-        border: 0;
+      footer {
+        width: 1540px;
+        margin: 0 auto;
+      }
+      p {
         color: #fff;
-        vertical-align: baseline;
-        text-align: center;
+      }
+      .topwarp .sns ul li {
+        width: 140px;
+        height: 60px;
+      }
+
+      .topwarp .list ul li {
+        width: 1504px;
+        height: 940px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .sns {
+        display: flex;
+      }
+
+      .sns li a {
+        display: block;
+        width: 35px;
+        height: 30px;
+        background-image: url(https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png);
+      }
+      .sns li:first-child a {
+        background-position: -70px 0;
+      }
+
+      .sns li:last-child a {
+        background-position: -105px 0;
+      }
+      .list {
+        display: flex;
+      }
+      .list li a {
+        color: #666;
+      }
+      .list a:hover {
+        color: white;
+      }
+      footer .list li a:after {
+        content: "|";
+        padding: 0 10px;
       }
     </style>
   </head>
@@ -84,21 +149,30 @@
           alt="브랜드메인이미지"
         />
       </p>
-      <div class="footer">
-        <ul>
+      <footer>
+        <p>
+          (주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F / 우편번호:
+          06098 <br />
+          대표문의: 02-2286-8800 <br />
+          사업자번호: 261-81-16391 ㅣ 대표자: 윤다예 <br />
+        </p>
+
+        <ul class="sns">
           <li>
-            (주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F /
-            우편번호: 06098
+            <a href=""></a>
           </li>
-          <li>대표문의: 02-2286-8800</li>
-          <li>사업자번호: 261-81-16391 ㅣ 대표자: 윤다예</li>
-          <li>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</li>
+          <li>
+            <a href=""></a>
+          </li>
         </ul>
-      </div>
-      <p class="sns">
-        <img src="https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png" alt="btn_sns">
-      </p>
-      </div>
+
+        <ul class="list">
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">TERMS OF SERVICE</a></li>
+          <li><a href="#">CUSTOMER</a></li>
+          <li><a href="#">RECRUIT</a></li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>
