@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+    <style>
+      :first {
+        outline: none;
+        /*first : input에 가서 데이터 입력할려고 할때 커서가 깜빡거리는 상태에서 밖에 라인이 생기니까 해주지마*/
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button">회원가입</button>
+    <!--폼 태그 안에 있으면 input /폼 태그 안에 없으면<button type="button">  -->
+    <fieldset>
+      <!--작업할것 그룹으로 묶음-->
+      <legend>회원가입</legend>
+      <p>
+        아이디 :
+        <input
+          type="text"
+          maxlength="10"
+          minlength="5"
+          size="10"
+          placeholder="아이디입력"
+          onfocus="this.placeholder=''"
+          autofocus
+        />
+      </p>
+      <p>비밀번호: <input type="password" required /></p>
+      <!--required : 입력해야지 넘어감 -->
+      <p>검색: <input type="search" /></p>
+      <p>이메일: <input type="email" /></p>
+      <p>
+        전화번호:
+        <input
+          type="tel"
+          pattern="[0-9]{3}-[0-9]{4}-[0-9][4]"
+          placeholder="000-0000-0000"
+        />
+      </p>
+      <p>색상: <input type="color" /></p>
+      <p>넘버: <input type="number" value="1" max="20" min="1" /></p>
+      <p>range: <input type="range" /></p>
+
+      <p>
+        <label for="men">남</label>
+        <!-- input이라고 적혀있는 id 값을 찾는 것-->
+        <input type="radio" name="gender" id="man" value="남자" />
+      </p>
+      <p><input type="radio" name="gender" id="women" />여</p>
+      <!-- name="gender" 속성값이 같아야 함 중복선택x-->
+      <p>
+        <label for="hobby">관심분야</label>
+        <input type="checkbox" name="design" id="hobby" />디자인
+      </p>
+      <p><textarea name="txt" id="txt" cols="30" rows="10"></textarea></p>
+      <p>
+        <select name="city" id="city">
+          <option value="">선택</option>
+          <option value="서울">서울</option>
+          <option value="대전">대전</option>
+          <option value="부산">부산</option>
+          <option value="대구">대구</option>
+          <!-- 담당자는 value 안에 있는 속성 값을 봄 / 사용자는 value 안에 있는 속성 값 보는게 아님 -->
+        </select>
+      </p>
+      <p>년월일 : <input type="date" /></p>
+      <p>년월일시간 : <input type="datetime-local" /></p>
+      <p>시간 : <input type="time" /></p>
+      <p>월 : <input type="month" /></p>
+      <p>주 : <input type="week" /></p>
+      <p><input type="reset" /></p>
+      <p><input type="image" src="./imgs/img_search.JPG" /></p>
+      <p><input type="button" value="로그인" /></p>
+      <p><input type="submit" value="전송" /></p>
+      <p><input type="file" /></p>
+    </fieldset>
+  </body>
+</html>
