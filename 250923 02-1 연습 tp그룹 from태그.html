@@ -20,7 +20,7 @@
         height: 100%;
       }
       div.visua p img {
-        width: 1707px;
+        width: 100%;
         object-fit: contain;
         opacity: 0;
       }
@@ -32,16 +32,7 @@
       #b6:checked ~ div p:nth-child(6) img {
         opacity: 1;
       }
-      div.visua {
-        position: relative;
-        /* width: 1920px;
-        height: 480px; */
-      }
-      div.visua p {
-        position: relative;
-        width: 100%;
-        height: 100px;
-      }
+
       div.but {
         display: flex;
         justify-content: center;
@@ -58,6 +49,43 @@
       .btn label::after {
         content: "|";
         size: 25px;
+        color: black;
+      }
+      .but {
+        display: flex;
+        gap: 20px;
+      }
+
+      .but label {
+        cursor: pointer;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #333;
+        position: relative;
+      }
+
+      /* 밑줄 애니메이션 기본 */
+      .but label::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40%;
+        height: 2px;
+        background: red;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+
+      /* hover 시 */
+      .but label:hover::after {
+        transform: scaleX(1);
+      }
+
+      /* 클릭(선택)된 상태 유지 */
+      .but input[type="radio"]:checked + label::after {
+        transform: scaleX(1);
       }
     </style>
   </head>
