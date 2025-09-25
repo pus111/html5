@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-timing-function: 1inear;
+        animation-delay: 1s;
+        animation-iteration-count: infinite; /*계속움직임 */
+        animation-direction: alternate; /*앞뒤로 움직임*/
+      }
+      @keyframes move {
+        form {
+          left: 0;
+          background: red;
+        }
+        50% {
+          left: 250px;
+          background: green;
+        }
+        to {
+          left: 500px;
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>
