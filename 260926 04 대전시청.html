@@ -12,14 +12,18 @@
       ul {
         list-style: none;
         display: flex;
+        justify-content: center;
+        gap: 40px;
       }
       ul li {
         width: 142px;
         height: 142px;
-        transition: 1s;
+        cursor: pointer;
+        transition: 0s;
       }
       ul li:hover {
         background-position: 0 -240px;
+        animation: move 1s infinite;
       }
 
       ul li:nth-child(1) {
@@ -36,6 +40,23 @@
 
       ul li:nth-child(4) {
         background-image: url(./imgs/bg_info_m06.png);
+      }
+
+      @keyframes move {
+        0%,
+        100% {
+          transform: translateX(0);
+          animation-timing-function: ease-in;
+        }
+
+        50% {
+          transform: translateX(10px);
+          animation-timing-function: ease-out;
+        }
+        /* 100% {
+          transform: translateX(0);
+           animation-timing-function: ease-in;
+        } */
       }
     </style>
   </head>
