@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마스크이미지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p:first-child {
+        mask-image: url(./imgs/w3logo.png);
+        mask-repeat: no-repeat; /*마스크 반복 x*/
+        /* mask-size: cover;  마스크가 커져 있는 상태 */
+        mask-position: center; /*마스크 이미지의 기본 가운데 설정 */
+      }
+
+      p:nth-child(2) {
+        width: 960px;
+        mask-image: radial-gradient(circle, #000 50%, rgba(0, 0, 0, 0.5) 50%);
+        mask-position: center;
+      }
+      .bg1 {
+        height: 500px;
+        background: url(./imgs/photo1.jpg);
+      }
+      .bg1 h1 {
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        background: #fff;
+        line-height: 500px;
+        mix-blend-mode: screen;
+      }
+      .bg2 {
+        background: url(./imgs/photo2.jpg);
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <img src="./imgs/photo1.jpg" alt="" />
+    </p>
+
+    <p>
+      <img src="./imgs/photo1.jpg" alt="" />
+    </p>
+
+    <div class="bg1">
+      <h1>mix-blend-mode</h1>
+    </div>
+
+    <div class="bg2">
+      <h1>mix-blend-mode</h1>
+    </div>
+  </body>
+</html>
