@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.list {
+        display: flex;
+        justify-content: center;
+      }
+      ul li.ad{
+      position: relative;
+      padding: 32px;
+      width: 282px;
+      height: 293px;
+      border: 2px solid #e5e5e5;
+      background: #fff;
+      transition: 3s ease-in-out;
+      margin-top: 40px;
+      }
+      ul li p {
+        width: 120px;
+        height: 120px;
+      }
+      ul li:first-child p.subtitle {
+        background-image: url(./imgs/icon_ad.maim.png);
+      }
+
+      ul li:first-child:hover p.subtitle {
+        background-image: url(./imgs/icon_main_ad_play-Bu6Qtql2.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li  class="ad">
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>스마트한</span><samp>></samp></p>
+            <h1>광고서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">최적의 고객 타켓팅</p>
+        </a>
+      </li>
+
+      <!-- <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><samp>></samp></p>
+            <h1>Data 서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a> -->
+      </li>
+    </ul>
+  </body>
+</html>
