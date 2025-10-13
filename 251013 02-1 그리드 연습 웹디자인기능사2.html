@@ -58,13 +58,27 @@
       }
       .wrap .foot {
         border-top: 1px solid;
-        background: #bbb;
+       height: 100px;
       }
-      .wrap .fmenu {
-        background: #cccc;
+      .wrap .foot .bottom{
+        display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 200px 1000px;
+        grid-template-rows: 50px 50px;
+        grid-template-areas: "flogo fmenu" "flogo copyright";
       }
-      .wrap .copyright {
-        background: #ddd;
+      .wrap .foot .bottom .flogo {
+        grid-area:flogo;
+        background: yellow;
+      }
+        .wrap .foot .bottom .fmenu {
+        grid-area: fmenu;
+        background:paleturquoise;
+      }
+      .wrap .foot .bottom .copyright {
+          grid-area: copyright;
+        background: yellowgreen;
       }
     </style>
   </head>
