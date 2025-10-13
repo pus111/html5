@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        background: #ccc;
+        /* display: grid; */
+        display: inline-grid; /*한 줄에 다른 요소들과 나란히 배치되는 그리드 컨테이너*/
+        grid-template-columns: 100px 100px 200px; /*세로 간격 */
+        /* grid-template-areas: "a a b" "c d f" "g g h" "i i i"; */
+        grid-template-areas: "a a b" "c d d" "g h h" "i i i";
+        grid-template-rows: 100px;
+        /* grid-auto-rows: 100px; */
+        /* column-gap: 20px; 열 사이의 간격을 지정하는 속성 
+        row-gap: 40px; 세로 사이의 간격 지정하는 속성 */
+        gap: 40px 20px; /*row-gap,column-gap 동시에 사용할 때 */
+      }
+      .grid-container .grid-item {
+        background: #ddd;
+      }
+      /*영역이름을 부모가 아닌 자식에 줌*/
+      .grid-container .grid-item:nth-child(1) {
+        grid-area: a;
+      }
+      .grid-container .grid-item:nth-child(2) {
+        grid-area: b;
+      }
+      .grid-container .grid-item:nth-child(3) {
+        grid-area: c;
+      }
+      .grid-container .grid-item:nth-child(4) {
+        grid-area: d;
+      }
+      .grid-container .grid-item:nth-child(5) {
+        grid-area: e;
+      }
+      .grid-container .grid-item:nth-child(6) {
+        grid-area: f;
+      }
+      .grid-container .grid-item:nth-child(7) {
+        grid-area: g;
+      }
+      .grid-container .grid-item:nth-child(8) {
+        grid-area: h;
+      }
+      .grid-container .grid-item:nth-child(9) {
+        grid-area: i;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>
