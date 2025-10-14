@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        border: 1px solid;
+        display: grid;
+        grid-template-columns: 100px 200px 300px;
+        grid-template-rows: 100px;
+        /* 
+         row-gap: 20px;
+         column-gap: 40px;
+        */
+        gap: 20px 40px; /*수치가 두개 있으면row-gap 먼저 /  그 다음 column-gap  */
+      }
+      .grid-item {
+        background: #ccc;
+      }
+      .grid-item:nth-child(1) {
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+        grid-column: 1 / 4;
+      }
+      .grid-item:nth-child(2) {
+        grid-area: item2;
+      }
+      .grid-item:nth-child(3) {
+        grid-area: item3;
+      }
+      .grid-item:nth-child(4) {
+        grid-area: item4;
+      }
+      .grid-item:nth-child(5) {
+        grid-area: item5;
+      }
+      .grid-item:nth-child(6) {
+        grid-area: item6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>
