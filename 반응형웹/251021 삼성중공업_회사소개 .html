@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업 회사소개</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .greeting {
+        width: 96%;
+        max-width: 1400%;
+        margin: 0 auto;
+      }
+      .greeting ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 35px 0;
+      }
+      .greeting ul li {
+        flex: 1 0 30%;
+        /* flex: [flex-grow] [flex-shrink] [flex-basis];=flex: 1 0 30%; 세 가지 값을 한 줄로 표현한 축약 속성(shorthand)
+         flex-grow: 1 → 남는 공간이 있을 때, 각 항목이 동일한 비율로 늘어남
+         flex-shrink: 0 → 공간이 부족해져도 줄어들지 않음
+         flex-basis: 30% → 기본 너비를 30%로 설정*/
+      }
+      .greeting ul li > div {
+        width: 100%;
+        display: flex;
+        max-width: 380px;
+        gap: 200px;
+        padding: 45px 0;
+      }
+      .greeting ul li:first-child > div,
+      .greeting ul li:nth-child(2) > div,
+      .greeting ul li:nth-child(3) > div {
+        border-bottom: 3px solid #111;
+      }
+      .greeting ul li > div p.title {
+        font-size: 19px;
+        font: weight 100px;
+      }
+      .greeting ul li > div p.text {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="greeting">
+      <ul>
+        <!-- <li>
+          <div>
+            <p class="top">삼성중공업 주식회사</p>
+          </div>
+        </li> -->
+
+        <li>
+          <div>
+            <p class="title">대표이사</p>
+            <p class="text">최성안</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p class="title">창립일</p>
+            <p class="text">1974년8월5일</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p class="title">종업원수</p>
+            <p class="text">10,112명</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p class="title">자본금</p>
+            <p class="text">8,801억원</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p class="title">매출액</p>
+            <p class="text">99,031억원</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <p class="title">총자산</p>
+            <p class="text">169,979억원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
