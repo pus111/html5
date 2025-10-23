@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function myFunction() {
+        // myFunction() : 사용자 지정 사용자가 함수선언 할 때
+        document.getElementById("demo").innerHTML = "Paragraph<br>changed.";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+      // function myFunction() {
+      //   document.getElementById("demo").innerHTML = "Paragraph changed.";
+      // }
+
+      document.getElementById("btn").onclick = function () {
+        myFunction();
+      };
+      document.getElementsByClassName("list")[0].style.fontSize = "50px";
+      document.getElementsByClassName("ul")[0].style.border = "1px solid";
+    </script>
+  </body>
+</html>
