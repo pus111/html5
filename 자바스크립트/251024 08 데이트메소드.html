@@ -7,27 +7,17 @@
   </head>
   <body>
     <script>
-      let x = 10;
-      let y = 20;
-      let z = "10";
-      document.write(`x의 유형은 ${typeof x} <br>`);
-      document.write("x의 유형은", typeof x, "<br>");
-      document.write("z의 유형은", typeof z, "<br>");
-      document.write("10.3.3", typeof "10.3.3", "<br>");
-      // let a = Number("10");
-      let a = Number("one");
-      document.write(`a의 유형은 ${typeof a} <br>`);
-      document.write(`a 값은 ${a} <br>`);
-      document.write(`${parseFloat(123.456789)}<br>`);
-      document.write(`${parseFloat("123.456789")}<br>`);
-      document.write(`${parseInt(123.456789)}<br>`);
-      document.write(`${parseint("123.456789")}<br>`);
-      document.write(`${String(100)}<br>`);
-      document.write(`${(100).toString()}<br>`);
-      document.write(`${String(100) + (100).toString()}<br>`);
-      let num1 = 5.34567899;
-      let num2 = 10000000000000;
-      du;
+      let now = new Date(); // Date 시간 날짜
+      document.write(`${now}<br>`);
+      document.write(`년도:${now.getFullYear()}<br>`);
+      document.write(`월:${now.getMonth() + 1}<br>`);
+      document.write(`일:${now.getDate()}<br>`);
+      document.write(`요일:${now.getDay()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
+      document.write(`시:${now.getHours()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
+      document.write(`분:${now.getMinutes()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
+      document.write(`초:${now.getSeconds()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
+      document.write(`밀리초:${now.getMilliseconds()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
+      document.write(`시간:${now.getTime()}<br>`); //이진수라서 숫자 밖에 모름 숫자로 반환
     </script>
   </body>
 </html>
