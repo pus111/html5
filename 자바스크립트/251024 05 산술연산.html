@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,19 +9,20 @@
     <script>
       let x = 10;
       let y = 20;
-      document.write("x + y=" + (x + y) + "<br>");
-      document.write("x + y=" + (x + y), "<br>"); // ,(콤마) 좌 우에 있는 식을 연결
-      document.write("x + y=" + (x - y) + "<br>");
-      document.write("x + y=" + x * y + "<br>");
-      document.write("x + y=" + x / y + "<br>");
-      document.write("x + y=" + (x % y) + "<br>");
-      document.write("x + y=" + x ** y + "<br>"); //** : 지수
-      //document.write("x++ ", x++, "<br>"); //++  : 후위연산 x를 출력하고 그 다음에 +1
-      document.write("++x ", ++x, "<br>"); //++  : 전위연산 +1를 하고 x를 출력
-      document.write("x-- ", x++, "<br>"); //++  : 후위연산 x를 출력하고 그 다음에 +1
-      // document.write("--x ", ++x, "<br>"); //++  : 전위연산 +1를 하고 x를 출력
-      document.write(((x = x + 1), "<br>"));
-      document.write(((x += 1), "<br>"));
+      document.write("x + y = " + (x + y) + "<br>");
+      document.write("x + y = ", x + y, "<br>");
+      //,(콤마) 좌,우에 있는 식을 연결
+      document.write("x + y = " + (x - y) + "<br>");
+      document.write("x + y = " + x * y + "<br>");
+      document.write("x + y = " + x / y + "<br>");
+      document.write("x + y = " + (x % y) + "<br>");
+      document.write("x + y = " + x ** y + "<br>");
+      document.write("x++ ", x++, "<br>"); //후위연산 x출력한고 그다음에 +1
+      document.write("x ", x, "<br>");
+      // document.write("++x ", ++x, "<br>"); //전위연산 +1을 하고 x출력
+      // document.write("x ", x, "<br>"); //전위연산 +1을 하고 x출력
+      document.write((x = x + 1), "<br>");
+      document.write((x += 1), "<br>");
     </script>
   </body>
 </html>
