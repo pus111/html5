@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meet you E";
+      let str2 = new String("How are you today?");
+      document.write(str1.search("m") + "<br>"); // str1.search("문자열") : 찾고자 하는 문자열를 찾아줌 (시작은 0부터 공백 포함)
+      document.write(str2.search("h") + "<br>"); // 소문자 대문자 구분, 원하는 문자열 없으면 - 값
+      document.write(str2.search("H") + "<br>");
+      document.write(str2.search(/h/i) + "<br>");
+      document.write(str2.search("a") + "<br>");
+      document.write(str1.search("nice", "good") + "<br>");
+      document.write(str1.search("Nice", "good") + "<br>");
+      console.log(str1);
+      document.write(str1.replace("Nice", "good") + "<br>");
+      document.write(str1.replace(/N/i, "N") + "<br>"); //  i = 대소문자 상관없이 찾음
+      document.write(str1.replace(/e/i, "a") + "<br>");
+      document.write(str1.replace(/e/g, "a") + "<br>");
+      document.write(str1.replace(/e/gi, "a") + "<br>");
+      document.write(str1.replaceAll("e", "a") + "<br>");
+      document.write(str1.indexOf("E") + "<br>");
+      document.write(str1.indexOf("x") + "<br>");
+      document.write(str1.lastIndexOf("e") + "<br>");
+      document.write(str1.match("e") + "<br>");
+      document.write(str1.match("x") + "<br>");
+      document.write(str1.charAt(0) + "<br>"); //charAt(숫자) : 고유의 좌표값을 출력
+      document.write(str1.slice(1, 3) + "<br>"); // (str1.slice(1(포함숫자), 3(미포함숫자)) : 1= 포함, 3=미포함
+      document.write(str1.slice(3) + "<br>"); // str1.slice(3) : end 끝나면 끝까지 있는 걸 다 가지고 옴
+
+      /*음의 값은 뒤에서, 양의 값은 앞에서 부터 시작 */
+      document.write(str1.slice(-5) + "<br>");
+
+      let str3 = "123456-1234567";
+      document.write(str3.replace(str3.slice(8), "******") + "<br>");
+      document.write(str3.replace(str3.slice(8), "*".repeat(6)) + "<br>");
+      document.write(str3.substring(0) + "<br>");
+      document.write(str3.substring(3) + "<br>");
+      document.write(str3.substring(3, 8) + "<br>");
+      document.write(str3.substring(-1) + "<br>"); // 음수 허용x --> 0으로 처리
+      document.write(str3.substr(0, 5) + "<br>"); //substr(0, 5) ---> 갯수
+      /*음의 값은 뒤에서, 양의 값은 앞에서 부터 시작 */
+      document.write(str3.substr(-5, 5) + "<br>");
+      document.write(str3.replace(str3.substr(-6) + "******") + "<br>");
+      document.write(str3.length);
+      document.write(str1.split(" ")[1] + "<br>");
+    </script>
+  </body>
+</html>
