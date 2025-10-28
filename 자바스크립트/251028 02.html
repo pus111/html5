@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">photo01</a></li>
+      <li><a href="#">photo02</a></li>
+      <li><a href="#">photo03</a></li>
+    </ul>
+    <p><img src="../html5/imgs/photo1.jpg" alt="" /></p>
+    <script>
+      let photo = document.querySelectorAll("ul li"); // querySelectorAll : 한번에 리스트 만드는 요소
+      let photoImg = document.querySelector("p img");
+      /*photo.onclick = function (e) {
+        e, preventDefault(); // 가장 위에서 처리
+        photoImg.src = "../imgs/photo1.jpg";
+      };
+      photo1.onclick = function (e) {
+        e.preventDefault();
+        photoImg.src = "../imgs/photo2.jpg";
+      };
+      photo2.onclick = function (e) {
+        e.preventDefault();
+        photoImg.src = "../imgs/photo3.jpg";
+      };*/
+      photo.forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.prevenDefault();
+          // // photoImg = src = "../html5/imgs/photo1.jpg" + (k + 1) + ".jpg";
+          // photoImg = src = `../html5/imgs/photo1.jpg ${k + 1}.jpg`;
+          // let imgSrc = photoImg.getAttribute("src");
+          // let newSrc = imgSrc.replace(imgSrc.slice(-5, -4), k + 1);
+          let imgAlt = photoImg.getAttribute("alt");
+          let newAlt = imgAlt.replace(imgAlt.slice(-1), k + 1);
+
+          photoImg.setAttribute("src", newSrc);
+          photoImg.setAttribute("alt", newAlt);
+        };
+      });
+    </script>
+  </body>
+</html>
