@@ -44,6 +44,7 @@ section.visual {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 }
 section.visual nav {
   position: absolute;
@@ -67,6 +68,28 @@ section.visual nav .logo img {
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
     brightness(107%) contrast(100%);
 }
+.con img {
+  width: 100%;
+  max-width: 1280px;
+  height: 470px;
+  display: block;
+  margin: 0 auto;
+}
+
+.txt h4 {
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 50px;
+}
+.txt span {
+  line-height: 150%;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
 section.visual nav .right {
   display: flex;
   gap: 40px;
