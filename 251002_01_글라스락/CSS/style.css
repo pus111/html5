@@ -13,10 +13,8 @@ a {
 input {
   display: none;
 }
-
-/*삼선메뉴 - 이름 6개ABOUT~CAREER css */
 #fullmenu {
-  position: fixed; /*창이 작아도 fixed 때문에 100% 들어감*/
+  position: fixed;
   right: -100%;
   top: 0;
   width: 500px;
@@ -39,8 +37,6 @@ input {
 section {
   height: 100vh;
 }
-
-/*INNOVATION css*/
 section.visual {
   position: relative;
   background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
@@ -49,62 +45,24 @@ section.visual {
   align-items: center;
   justify-content: center;
 }
-
-.con1 {
-  max-width: 100%;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center; /*이미지요소 가운데 */
-}
-
-.con1 h4 {
-  font-size: 50px;
-  padding: 30px;
-}
-
-.con1 span {
-  display: block;
-  line-height: 150%;
-  margin-top: 20px;
-}
-
-.con2 {
-  max-width: 100%;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center; /*이미지요소 가운데 */
-}
-
-.con2 h4 {
-  font-size: 50px;
-  padding: 30px;
-}
-.con2 span {
-  display: block;
-  line-height: 150%;
-  margin-top: 20px;
-}
-
-/*로고,글라스몰,한국어 css*/
 section.visual nav {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 95%;
   max-width: 1720px;
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  z-index: 1; /*hambugerdml의 부모 */
+  z-index: 1;
 }
 section.visual nav .logo {
   width: 150px;
 }
 section.visual nav .logo img {
-  /*이미지는 이미지 대로 작게*/
   width: 100%;
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
     brightness(107%) contrast(100%);
@@ -124,15 +82,12 @@ section.visual nav .right .mall {
 section.visual nav .right .mall a {
   color: #fff;
 }
-
 section.visual nav .right .mall img {
   width: 20px;
   height: 20px;
   filter: invert();
   vertical-align: middle;
 }
-
-/*한국어 css*/
 section.visual nav .right .lang a {
   color: #fff;
   display: block;
@@ -141,14 +96,6 @@ section.visual nav .right .lang a {
   text-underline-offset: 10px; */
   border-bottom: 1px solid #fff;
   padding: 10px;
-}
-section.visual h1 {
-  color: #fff;
-  font-size: 90px;
-}
-/*삼선메뉴 css*/
-section.visual nav .right .hambuger {
-  position: relative;
 }
 section.visual nav .right .hambuger label {
   cursor: pointer;
@@ -160,6 +107,10 @@ section.visual nav .right .hambuger label span {
   background: #fff;
   margin: 9px 0;
   transition: 0.5s;
+}
+section.visual h1 {
+  color: #fff;
+  font-size: 90px;
 }
 #menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
   transform: translate(0, 11px) rotate(45deg);
@@ -175,14 +126,6 @@ section.visual nav .right .hambuger label span {
 #menu:checked ~ #fullmenu {
   right: 0;
 }
-nav {
-  position: fixed;
-  left: 100%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-}
 #menu:checked ~ section.visual::after {
   content: "";
   position: absolute;
@@ -191,7 +134,7 @@ nav {
   width: calc(100% - 500px);
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3); /*background에 블러를 준 것*/
+  backdrop-filter: blur(3px);
   z-index: 2;
 }
 #mall_btn {
