@@ -127,12 +127,14 @@
     <script>
       let btn = document.querySelectorAll(".list li");
       function myGs() {
-        let showCon = querySelector(".title span").classList.contains("on");
+        let showCon =
+          this.querySelector(".title span").classList.contains("on");
         console.log(showCon);
-        bnt.forEach(function (v) {
-          v.querySelector(".title span").classList.contains("on");
-          v.querySelector(".title span").classList.contains("on");
+        btn.forEach(function (v) {
+          v.querySelector(".title span").classList.remove("on");
+          v.querySelector(".contents").style.height = 0;
         });
+
         if (!showCon) {
           this.querySelector(".title span").classList.add("on");
           let ht = this.querySelector(".con").clientHeight;
