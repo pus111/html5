@@ -44,7 +44,6 @@ main section .txt a h4 {
 main section .txt a h5 {
   font-size: 14px;
 }
-
 main section:first-child .txt a {
   background-image: url(https://www.bekseju.com/images/main-story-bg.png);
 }
@@ -63,10 +62,6 @@ main section:nth-child(2) > div.medi {
 main section > div.medi p {
   height: 100%;
 }
-/* main section:first-child > div.photo p,
-main section:last-child > div.photo p {
-  height: 100%;
-} */
 main section img,
 main section video {
   width: 100%;
