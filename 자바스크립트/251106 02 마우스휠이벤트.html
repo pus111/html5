@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <script>
+      window.addEventListener("wheel", function (e) {
+        console.log(e.deltaY); //deltaY = 사용자가 마우스 올리는지 내리는지 인식
+        if (e.deltaY > 0) {
+          console.log("마우스를 내리고 있음");
+        } else if (e.deltaY < 0) {
+          console.log("마우스를 올리고 있음");
+        }
+      });
+    </script>
+  </body>
+</html>

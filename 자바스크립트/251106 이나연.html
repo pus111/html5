@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아머드프레시</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.txt {
+        width: 1210px;
+        margin: 50px auto;
+        font-size: 24px;
+        color: #d1a050;
+      }
+      ul.txt li {
+        border-top: 1px solid #d1a050;
+        /* border-bottom: 1px solid #d1a050; */
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      ul.txt span {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      ul.txt span.on {
+        transform: rotate(45deg);
+        font-weight: 600;
+      }
+      ul.txt li p:last-child {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.txt li p:last-child.on {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="txt">
+      <h1>Slices - Oat Base</h1>
+      <li>
+        <span>+</span>AMERICAN
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+
+      <li>
+        <span>+</span>CHEDDAR
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+
+      <li>
+        <span>+</span>PROVOLONE
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PROVOLONE-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <span>+</span>PEPPER JACK
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".txt li");
+      let pl = document.querySelectorAll(".txt li span");
+      let de = document.querySelectorAll("ul.txt li p:nth-child(2)");
+
+      btn.forEach(function (v) {
+        v.onclick = function () {
+          let showCon = this.querySelector("span").classList.contains("on");
+
+          if (showCon) {
+            this.querySelector("span").classList.remove("on");
+            this.querySelector("p").classList.remove("on");
+          } else {
+            pl.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            de.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            this.querySelector("span").classList.add("on");
+            this.querySelector("p").classList.add("on");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
