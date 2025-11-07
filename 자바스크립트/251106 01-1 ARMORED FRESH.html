@@ -31,6 +31,7 @@
         width: 100vw;
         height: 100%;
         object-fit: cover;
+        transition: opacity 0.8s ease-in-out;
       }
       #content {
         position: relative;
@@ -130,25 +131,30 @@
             console.log(currentIndex);
             if (currentIndex < videoSets.length - 1) {
               currentIndex++;
-              document.querySelector("body").style.overflow = "hidden";
+
               playSet(videoSets[currentIndex]);
-            } else if (currentIndex == 2) {
-              document.querySelector("#videoSection").style.position =
+            } else {
+              document.bady.style.overflow = "vistble";
+              document.getElementById("videoSection").style.postition =
                 "relative";
-              document.querySelector("body").style.overflow = "visible";
             }
-          } else if (e.deltaY < 0) {
+          } else {
             // 위로 스크롤
-            document.querySelector("#videoSection").style.position = "fixed";
-            document.querySelector("body").style.overflow = "hidden";
             if (currentIndex > 0) {
               currentIndex--;
               const reverseSet =
                 reverseSets[currentIndex] || videoSets[currentIndex];
               playSet(reverseSet);
+              document.getElementById("videoSection").style.position = "fixed";
             }
           }
-        }, 200);
+          let wheelTimer;
+          window.addEventListener("wheel", (e) => {
+            scrollDirection = e.deltaY;
+            clearTimeout(wheelTimer);
+            wheelTimer = setTimeout(handleScroll, 150);
+          });
+        });
       });
     </script>
   </body>
