@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 500px;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        transition: 1s;
+        overflow: hidden;
+        white-space: nowrap;
+        /*줄바꿈을 허용하지 않고,텍스트가 한 줄로만 표시되도록만듬,  
+        필요 시 overflow: hidden과 같이 사용 */
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- <script src="jquery-ui.min.js"></script> -->
+    <script>
+      $(function () {});
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>제이쿼리</p>
+    </div>
+    <button id="slideleft">slideleft</button>
+    <button id="slideright">slideright</button>
+    <button id="slide">slide</button>
+    <script>
+      $("#slideleft").click(function () {
+        $("p").css("width", "0");
+      });
+      $("#slideright").click(function () {
+        $("p").css("width", "100%");
+      });
+      $("#slide").click(function () {
+        if ($("p").width() > 0) {
+          $("p").css("width", "0");
+        } else {
+          $("p").css("width", "100%");
+        }
+      });
+    </script>
+  </body>
+</html>

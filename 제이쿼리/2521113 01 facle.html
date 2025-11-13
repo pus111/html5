@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+      p {
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+      $(function () {});
+    </script>
+  </head>
+  <body>
+    <p>제이쿼리</p>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <button id="fadeTo">fadeTo</button>
+    <script>
+      $("#fadeOut").click(function () {
+        $("p").fadeOut(1000); //숫자도 가능하지만, 문자로도 가능
+      });
+      $("#fadeIn").click(function () {
+        $("p").fadeIn(1000);
+      });
+      $("#fadeToggle").click(function () {
+        $("p").fadeToggle(1000);
+      });
+      $("#fadeTo").click(function () {
+        $("p").fadeTo();
+      });
+    </script>
+  </body>
+</html>
