@@ -95,8 +95,22 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
       $(function () {
-        let page = $("page ul li");
+        let page = $("#page ul li");
         let sections = $("section");
+        let sec = $("#section2").offset();
+        console.log(sec);
+        $(page).eq(0).find("a").addClass("bgblue");
+        $(page).each(function (k, v) {
+          $().click(function () {
+            let target = "#section" + (k + 1);
+            $("html.body").animate(
+              {
+                scrollTop: $(target).offset().top,
+              },
+              600
+            );
+          });
+        });
       });
     </script>
   </head>
