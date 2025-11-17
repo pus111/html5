@@ -25,25 +25,55 @@
     <div class="box green"></div>
     <div class="box blue"></div>
     <div class="box red"></div>
+
+    <button class="pause">pause</button>
+    <button class="resume">resume</button>
+    <button class="restart">restart</button>
+    <button class="seek">seek</button>
+    <button class="reverse">reverse</button>
     <script>
       let tl = gsap.timeline();
-      tl.to(".green", {
-        x: 500,
-        duration: 5,
-        rotation: 360,
-      })
-        .to(".blue", {
+      tl.to(
+        ".green",
+        {
           x: 500,
           duration: 5,
           rotation: 360,
-          // delay: 2,
-        })
+        },
+        1
+      )
+        .to(
+          ".blue",
+          {
+            x: 500,
+            duration: 5,
+            rotation: 360,
+            // delay: 2,
+          },
+          "+=2" // += : 이전 애니메이션(green)이 끝난 시점으로부터 몇 초 후에 시작, ex)2초 뒤에 시작하는 딜레이
+          //"-=2" -= : 앞 애니메이션(blue) 이 끝나기 2초 전에 시작 (이전 애니매이션 종료 시간에서 2초 뺌 )
+        )
         .to(".red", {
           x: 500,
           duration: 5,
           rotation: 360,
           // delay: 4,
         });
+      document.querySelector(".pause").onclick = function () {
+        tl.pause();
+      };
+      document.querySelector(".resume").onclick = function () {
+        tl.resume();
+      };
+      document.querySelector(".restart").onclick = function () {
+        tl.restart();
+      };
+      document.querySelector(".seek").onclick = function () {
+        tl.seek();
+      };
+      document.querySelector(".reverse").onclick = function () {
+        tl.reverse();
+      };
     </script>
   </body>
 </html>
