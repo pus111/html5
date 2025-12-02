@@ -8,11 +8,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 
     <style>
       * {
@@ -22,28 +17,57 @@
       .visual {
         position: relative;
         height: 100vh;
+        overflow: hidden;
       }
+      .menu {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+      }
+      .menu ul {
+        display: flex;
+        gap: 60px;
+        list-style: none;
+        font-size: 20px;
+        color: #fff;
+      }
+
       .swiper {
         width: 100%;
         height: 100%;
       }
       .swiper-slide img {
-        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
         transform: scale(1.5);
-        transition: 5s ease-in-out;
+        transition: transform 5s ease-in-out;
       }
 
-      .swiper-slide img.on {
-        position: absolute;
-        transform: translate(-50%, -50%);
+      .swiper-slide-active img {
+        transform: scale(1);
+      }
+      .swiper-button-next,
+      .swiper-vbutton-prev {
+        color: #fff;
       }
     </style>
   </head>
+
   <body>
     <div class="visual">
+      <div class="menu">
+        <ul>
+          <li>회사소개</li>
+          <li>메뉴</li>
+          <li>매장</li>
+          <li>멤버십</li>
+          <li>새소식</li>
+        </ul>
+      </div>
+
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -60,45 +84,23 @@
             />
           </div>
         </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script>
-      let slide = document.querySelectorAll(".swiper-slide");
-      document.querySelector(".start").innerHTML = "1";
-      document.querySelector(".end").innerHTML = slide.length;
-      function slideimg() {
-        slide.forEach(function (v) {
-          v.querySelector("img").classList.remove("on");
-        });
-        txt.forEach(function (v) {
-          v.querySelector("h1").classList.remove("on");
-        });
-      }
       var swiper = new Swiper(".mySwiper", {
+        loop: true,
         speed: 1000,
         effect: "fade",
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        on: {
-          slideChange: function () {
-            console.log(this.realIndex);
-            slideimg();
-            slide[this.realIndex].querySelector("img").classList.add("on");
-            txt[this.realIndex].querySelector("h1").classList.add("on");
-            document.querySelector(".start").innerHTML = this.realIndex + 1;
-          },
-        },
+        fadeEffect: { crossFade: true },
       });
     </script>
   </body>
